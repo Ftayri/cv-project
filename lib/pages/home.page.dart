@@ -1,3 +1,4 @@
+import 'package:cv/config/global.params.dart';
 import 'package:cv/menu/drawer.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
       menuScreen: MyDrawer(),
       mainScreen: MainScreen(),
       borderRadius: 24.0,
-      slideWidth: MediaQuery.of(context).size.width * 0.65,
+      slideWidth: MediaQuery.of(context).size.width * 0.85,
       angle: 0.0,
     );
   }

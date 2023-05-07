@@ -1,21 +1,23 @@
+import 'package:cv/main.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 
 class GlobalParams{
   static List<Map<String,dynamic>> menus=[
-    {"title":"Home","icon":Icon(Icons.home),
+    {"title":"Acceuil","icon":Icon(Icons.home,),
       "route":"/home"},
-    {"title":"About","icon":Icon(Icons.sunny_snowing),
-      "route":"/meteo"},
-    {"title":"Gallerie","icon":Icon(Icons.photo),
-      "route":"/gallerie"},
-    {"title":"Pays","icon":Icon(Icons.location_city),
-      "route":"/pays"},
-    {"title":"Contact","icon":Icon(Icons.contact_page),
-      "route":"/contact"},
-    {"title":"Paramètres","icon":Icon(Icons.settings),
-      "route":"/parametres"},
-    {"title":"Déconnexion","icon":Icon(Icons.logout),
-      "route":"/authentification"},
+    {"title":"Informations Personnelles","icon":Icon(Icons.info),
+      "route":"/personal-info"},
+    {"title":"Etudes","icon":Icon(Icons.school),
+      "route":"/studies"},
+    {"title":"Expériences professionelles","icon":Icon(Icons.work),
+      "route":"/experiences"},
+    {"title":"Compétences & Certifications","icon":Icon(Icons.workspace_premium),
+      "route":"/certifications"},
+    {"title":"Portfolio","icon":Icon(Icons.menu_book),
+      "route":"/portfolio"},
+    {"title":"Fermer","icon":Icon(Icons.logout),
+      "route":""},
   ];
 
   static List<Map<String,dynamic>> accueil=[
