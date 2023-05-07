@@ -40,6 +40,8 @@ dependencies:
   flutter_native_splash: ^2.2.19
   flutter_zoom_drawer: ^3.0.4+1
   get: ^4.6.5
+  url_launcher: ^6.1.10
+  linkable: ^3.0.1
 
 dev_dependencies:
   flutter_test:

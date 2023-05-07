@@ -1,10 +1,12 @@
 import 'package:cv/main.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/config.dart';
 
 class GlobalParams{
+
   static List<Map<String,dynamic>> menus=[
-    {"title":"Acceuil","icon":Icon(Icons.home,),
+    {"title":"Acceuil","icon":Icon(Icons.home),
       "route":"/home"},
     {"title":"Informations Personnelles","icon":Icon(Icons.info),
       "route":"/personal-info"},

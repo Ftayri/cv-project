@@ -1,4 +1,5 @@
 import 'package:cv/pages/home.page.dart';
+import 'package:cv/pages/personal_info.page.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,6 +13,7 @@ void main() {
 
 final routes = {
   '/home': (context) => HomePage(),
+  '/personal-info': (context) => PersonalInfoPage(),
 };
 
 class MyApp extends StatelessWidget {
