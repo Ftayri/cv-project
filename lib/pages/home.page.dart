@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
+import 'Experience.page.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -40,6 +42,8 @@ class _HomePageState extends State<HomePage> {
     case 1:
       ZoomDrawer.of(context)?.toggle();
       return PersonalInfoPage();
+    case 3:
+      return ExperienceScreen();
     default:
       return HomeScreen();
   }
