@@ -1,3 +1,4 @@
+import 'package:cv/pages/Etudes.dart';
 import 'package:cv/pages/home.page.dart';
 import 'package:cv/pages/personal_info.page.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
@@ -14,6 +15,7 @@ void main() {
 final routes = {
   '/home': (context) => HomePage(),
   '/personal-info': (context) => PersonalInfoPage(),
+  '/studies':(context) => EducationPage(),
 };
 
 class MyApp extends StatelessWidget {
