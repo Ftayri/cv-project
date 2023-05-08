@@ -11,61 +11,65 @@ class SkillsScreen extends StatelessWidget {
         title: Text('Compétences & Certifications'),
         leading: DrawerWidget(),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              'TECHNOLOGIES ET FRAMEWORKS :',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
+      body:
+      SingleChildScrollView(
+        child:Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'TECHNOLOGIES ET FRAMEWORKS :',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          SkillCard(
-            title: 'Laravel',
-            icon: FontAwesomeIcons.laravel,
-            color: Colors.red,
-          ),
-          SkillCard(
-            title: 'ExpressJS',
-            icon: FontAwesomeIcons.nodeJs,
-            color: Colors.green,
-          ),
-          SkillCard(
-            title: 'Flutter',
-            icon: FontAwesomeIcons.android,
-            color: Colors.blue,
-          ),
-          SkillCard(
-            title: 'Angular',
-            icon: FontAwesomeIcons.angular,
-            color: Colors.red,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              'CERTIFICATION :',
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
+            SkillCard(
+              title: 'Laravel',
+              icon: FontAwesomeIcons.laravel,
+              color: Colors.red,
+            ),
+            SkillCard(
+              title: 'ExpressJS',
+              icon: FontAwesomeIcons.nodeJs,
+              color: Colors.green,
+            ),
+            SkillCard(
+              title: 'Flutter',
+              icon: FontAwesomeIcons.android,
+              color: Colors.blue,
+            ),
+            SkillCard(
+              title: 'Angular',
+              icon: FontAwesomeIcons.angular,
+              color: Colors.red,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'CERTIFICATION :',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          SkillCard(
-            title: 'CCNA 1',
-            icon: FontAwesomeIcons.networkWired,
-            color: Colors.blue,
-          ),
-          SkillCard(
-            title: ' (AWS) Cloud Practitioner',
-            icon: FontAwesomeIcons.aws,
-            color: Colors.orange,
-          ),
-        ],
-      ),
+            SkillCard(
+              title: 'CCNA 1',
+              icon: FontAwesomeIcons.networkWired,
+              color: Colors.blue,
+            ),
+            SkillCard(
+              title: ' (AWS) Cloud Practitioner',
+              icon: FontAwesomeIcons.aws,
+              color: Colors.orange,
+            ),
+          ],
+        ),
+      )
+
     );
   }
 }
