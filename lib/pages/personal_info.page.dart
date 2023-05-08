@@ -1,6 +1,7 @@
 import 'package:cv/config/my_theme.dart';
 import 'package:cv/menu/drawer.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PersonalInfoPage extends StatelessWidget {
@@ -55,6 +56,7 @@ class PersonalInfoPage extends StatelessWidget {
                   icon: Icons.place,
                   title: "Adresse",
                   value: "Route de Tunis KM10, Cité Ons, Sfax"),
+              SizedBox(height:12),
               InfoCard(
                   icon: Icons.description,
                   title: "Profil",
@@ -62,6 +64,13 @@ class PersonalInfoPage extends StatelessWidget {
                       "en réseau. Apprend rapidement, travaille dur, innovant, responsable, complaisant et" +
                       " peut facilement s'adapter aux nouveaux défis"),
               SizedBox(height: 12),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  LinkIcons(iconData: FontAwesomeIcons.linkedin, uriString: "https://www.linkedin.com/in/iyed-zairi/"),
+                  LinkIcons(iconData: FontAwesomeIcons.github, uriString: "https://github.com/Ftayri",)
+                ],
+              )
 
               // Add more rows with cards for other personal info here
             ],
@@ -72,21 +81,19 @@ class PersonalInfoPage extends StatelessWidget {
   }
 }
 
-class SocialMediaIcons extends StatelessWidget {
-  final Uri _linkedinUri = Uri.parse('https://linkedin.com');
+class LinkIcons extends StatelessWidget {
+  final IconData iconData;
+  final Uri uri;
 
-  SocialMediaIcons({super.key});
+  LinkIcons({required this.iconData, required String uriString})
+      : uri = Uri.parse(uriString);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        IconButton(
-          icon: Icon(Icons.facebook),
-          onPressed: () => _launchInBrowser(_linkedinUri),
-        ),
-      ],
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return IconButton(
+      icon: Icon(iconData, color: isDark ? MyTheme.myDarkTheme.primary : MyTheme.myLightTheme.primary,),
+      onPressed: () => _launchInBrowser(uri),
     );
   }
 
