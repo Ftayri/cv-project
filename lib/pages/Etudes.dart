@@ -1,3 +1,4 @@
+import 'package:cv/menu/drawer.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -9,15 +10,15 @@ class EducationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mes Etudes'),
-        centerTitle: true,
+        leading: DrawerWidget(),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             Text(
-              'Université',
+              'Parcours Universitaire',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
@@ -45,10 +46,10 @@ class EducationPage extends StatelessWidget {
                     const SizedBox(width: 20),
                     Icon(
                       Icons.school,
-                      color: Colors.blue,
-                      size: 60,
+                      color: Theme.of(context).primaryColor,
+                      size: 35,
                     ),
-                    const SizedBox(width: 20),
+                    const SizedBox(width: 5),
                     SizedBox(
                       width: 20,
                     ),
@@ -65,7 +66,17 @@ class EducationPage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
+                        ),
+                        const Text(
+                          '2021 - Présent',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
                         ),
                         const Text(
                           '2ème année genie informatique',
@@ -73,15 +84,13 @@ class EducationPage extends StatelessWidget {
                             fontSize: 15,
                             color: Colors.grey,
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ],
                 ),
               ),
             ),
-            const SizedBox(height: 50),
-
             const SizedBox(height: 20),
             Expanded(
               child: AnimatedContainer(
@@ -107,10 +116,10 @@ class EducationPage extends StatelessWidget {
                     const SizedBox(width: 20),
                     Icon(
                       Icons.school,
-                      color: Colors.green,
-                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                      size: 35,
                     ),
-                    const SizedBox(width: 20),
+                    const SizedBox(width: 5),
                     SizedBox(
                       width: 20,
                     ),
@@ -126,15 +135,25 @@ class EducationPage extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         const Text(
-                          'Graduated in 2014',
+                          '2018 - 2021',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          'LTIC',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.grey,
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ],
@@ -143,19 +162,19 @@ class EducationPage extends StatelessWidget {
             ),
 
 
-            const SizedBox(height: 50),
+            const SizedBox(height: 10),
             Text(
-              'Université',
+              'Baccalauréat',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Expanded(
+
+
               child: AnimatedContainer(
                 duration: const Duration(seconds: 1),
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * 0.8,
+                width: MediaQuery.of(context).size.width * 0.8,
+
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -173,10 +192,10 @@ class EducationPage extends StatelessWidget {
                     const SizedBox(width: 20),
                     Icon(
                       Icons.school,
-                      color: Colors.blue,
-                      size: 60,
+                      color: Theme.of(context).primaryColor,
+                      size: 35,
                     ),
-                    const SizedBox(width: 20),
+                    const SizedBox(width: 5),
                     SizedBox(
                       width: 20,
                     ),
@@ -184,30 +203,30 @@ class EducationPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
-                        const Text(
-                          'IIT Sfax',
+                        Text(
+                          'Lycée Abou Kacem\nChebbi',
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                           ),
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
-
                         const Text(
-                          '2ème année genie informatique',
+                          '2017 - 2018',
                           style: TextStyle(
                             fontSize: 15,
-                            color: Colors.grey,
+                            color: Colors.black,
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         const Text(
-                          '2ème année genie informatique',
+                          'Baccalauréat science technique',
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.grey,
@@ -219,6 +238,7 @@ class EducationPage extends StatelessWidget {
                 ),
               ),
             ),
+
           ],
         ),
       ),
