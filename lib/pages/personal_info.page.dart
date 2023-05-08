@@ -1,3 +1,4 @@
+import 'package:cv/menu/drawer.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -7,6 +8,7 @@ class PersonalInfoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Informations Personelles'),
+        leading: DrawerWidget(),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
