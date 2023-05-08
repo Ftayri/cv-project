@@ -1,11 +1,12 @@
 import 'package:cv/config/my_theme.dart';
 import 'package:cv/menu/drawer.widget.dart';
-import 'package:cv/pages/Etudes.dart';
 import 'package:cv/pages/personal_info.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+
+import 'Etude.page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
       ZoomDrawer.of(context)?.toggle();
       return PersonalInfoPage();
     case 2:
-      return EducationPage();
+      return EducationScreen();
     case 4:
       return HomeScreen();
     default:
