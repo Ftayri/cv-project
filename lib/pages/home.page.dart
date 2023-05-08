@@ -1,6 +1,7 @@
 import 'package:cv/config/my_theme.dart';
 import 'package:cv/menu/drawer.widget.dart';
 import 'package:cv/pages/personal_info.page.dart';
+import 'package:cv/pages/portfolio.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -40,6 +41,9 @@ class _HomePageState extends State<HomePage> {
     case 1:
       ZoomDrawer.of(context)?.toggle();
       return PersonalInfoPage();
+    case 5:
+      ZoomDrawer.of(context)?.toggle();
+      return PortfolioPage();
     default:
       return HomeScreen();
   }
