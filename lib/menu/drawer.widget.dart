@@ -1,48 +1,85 @@
+import 'package:cv/config/global.params.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import '../config/global.params.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import '../config/my_theme.dart';
 
-class MyDrawer extends StatelessWidget {
-  late SharedPreferences prefs;
+class MyDrawer extends StatefulWidget {
+  final ValueSetter setIndex;
+
+  const MyDrawer({Key? key, required this.setIndex}) : super(key: key);
 
   @override
+  State<MyDrawer> createState() => _MyDrawerState();
+}
+
+class _MyDrawerState extends State<MyDrawer> {
+  @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: ListView(
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final theme = isDark ? MyTheme.myDarkTheme : MyTheme.myLightTheme;
+    return Scaffold(
+      backgroundColor: theme.primaryContainer,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          DrawerHeader(
-            child: Center(
-              child: CircleAvatar(
-                radius: 80,
-              ),
+          Padding(
+            padding: const EdgeInsets.all(60.0),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/iyed.jpg'),
+              backgroundColor: theme.tertiary,
+              radius: 50,
             ),
           ),
-          //parcourir les différents éléments du menu
-          ...(GlobalParams.menus as List).map((item) {
-            return ListTile(
-              title: Text('${item['title']}',style: TextStyle(fontSize: 22),),
-              leading: item['icon'],
-              trailing: Icon(Icons.arrow_right),
-              onTap: () async{
-                if('${item['title']}'!="Déconnexion") {
-                  Navigator.of(context).pop();
-                  Navigator.pushNamed(context, "${item['route']}");
-                }
-                else
-                {
-                  prefs = await SharedPreferences.getInstance();
-                  prefs.setBool("connecte", false);
-                  Navigator.of(context).pushNamedAndRemoveUntil('/login',
-                          (Route<dynamic> route) => false);
-                }
-              },
-            );
-          })
 
+          Expanded(
+            child: ListView.builder(
+              itemCount: GlobalParams.menus.length,
+              itemBuilder: (context, index) {
+                final item = GlobalParams.menus[index];
+                return drawerList(
+                  item['icon'],
+                  item['title'],
+                  index,
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
-    throw UnimplementedError();
   }
 
+  Widget drawerList(Icon icon, String text, int index) {
+    return GestureDetector(
+      onTap: () {
+        widget.setIndex(index);
+        ZoomDrawer.of(context)?.toggle();
+      },
+      child: Container(
+        margin: EdgeInsets.only(left: 20, bottom: 12),
+        child: Row(
+          children: [
+            icon,
+            SizedBox(width: 12),
+            Text(text),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DrawerWidget extends StatelessWidget {
+  const DrawerWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        ZoomDrawer.of(context)?.toggle();
+      },
+      icon: Icon(Icons.menu),
+    );
+  }
 }

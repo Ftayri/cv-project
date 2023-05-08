@@ -1,9 +1,10 @@
+
+import 'package:cv/config/my_theme.dart';
 import 'package:cv/pages/Etudes.dart';
 import 'package:cv/pages/home.page.dart';
 import 'package:cv/pages/personal_info.page.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
@@ -25,14 +26,45 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: routes,
       home: HomePage(),
+      // Made for FlexColorScheme version 7.0.5. Make sure you
+// use same or higher package version, but still same major version.
+// If you use a lower version, some properties may not be supported.
+// In that case remove them after copying this theme to your app.
       theme: FlexThemeData.light(
-        scheme: FlexScheme.materialBaseline,
-        surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
-        blendLevel: 7,
+        colors: MyTheme.myLightTheme,
+        appBarStyle: FlexAppBarStyle.primary,
         subThemesData: const FlexSubThemesData(
-          blendOnLevel: 10,
-          blendOnColors: false,
-          useM2StyleDividerInM3: true,
+          interactionEffects: false,
+          tintedDisabledControls: false,
+          inputDecoratorBorderType: FlexInputBorderType.underline,
+          inputDecoratorUnfocusedBorderIsColored: false,
+          tooltipRadius: 4,
+          tooltipSchemeColor: SchemeColor.inverseSurface,
+          tooltipOpacity: 0.9,
+          snackBarElevation: 6,
+          snackBarBackgroundSchemeColor: SchemeColor.inverseSurface,
+          navigationBarSelectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationBarUnselectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationBarMutedUnselectedLabel: false,
+          navigationBarSelectedIconSchemeColor: SchemeColor.onSurface,
+          navigationBarUnselectedIconSchemeColor: SchemeColor.onSurface,
+          navigationBarMutedUnselectedIcon: false,
+          navigationBarIndicatorSchemeColor: SchemeColor.secondaryContainer,
+          navigationBarIndicatorOpacity: 1.00,
+          navigationRailSelectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationRailUnselectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationRailMutedUnselectedLabel: false,
+          navigationRailSelectedIconSchemeColor: SchemeColor.onSurface,
+          navigationRailUnselectedIconSchemeColor: SchemeColor.onSurface,
+          navigationRailMutedUnselectedIcon: false,
+          navigationRailIndicatorSchemeColor: SchemeColor.secondaryContainer,
+          navigationRailIndicatorOpacity: 1.00,
+          navigationRailBackgroundSchemeColor: SchemeColor.surface,
+          navigationRailLabelType: NavigationRailLabelType.none,
+        ),
+        keyColors: const FlexKeyColors(
+          useSecondary: true,
+          useTertiary: true,
         ),
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
         useMaterial3: true,
@@ -41,12 +73,40 @@ class MyApp extends StatelessWidget {
         // fontFamily: GoogleFonts.notoSans().fontFamily,
       ),
       darkTheme: FlexThemeData.dark(
-        scheme: FlexScheme.materialBaseline,
-        surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
-        blendLevel: 13,
+        colors: MyTheme.myDarkTheme,
+        appBarStyle: FlexAppBarStyle.primary,
         subThemesData: const FlexSubThemesData(
-          blendOnLevel: 20,
-          useM2StyleDividerInM3: true,
+          interactionEffects: false,
+          tintedDisabledControls: false,
+          inputDecoratorBorderType: FlexInputBorderType.underline,
+          inputDecoratorUnfocusedBorderIsColored: false,
+          tooltipRadius: 4,
+          tooltipSchemeColor: SchemeColor.inverseSurface,
+          tooltipOpacity: 0.9,
+          snackBarElevation: 6,
+          snackBarBackgroundSchemeColor: SchemeColor.inverseSurface,
+          navigationBarSelectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationBarUnselectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationBarMutedUnselectedLabel: false,
+          navigationBarSelectedIconSchemeColor: SchemeColor.onSurface,
+          navigationBarUnselectedIconSchemeColor: SchemeColor.onSurface,
+          navigationBarMutedUnselectedIcon: false,
+          navigationBarIndicatorSchemeColor: SchemeColor.secondaryContainer,
+          navigationBarIndicatorOpacity: 1.00,
+          navigationRailSelectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationRailUnselectedLabelSchemeColor: SchemeColor.onSurface,
+          navigationRailMutedUnselectedLabel: false,
+          navigationRailSelectedIconSchemeColor: SchemeColor.onSurface,
+          navigationRailUnselectedIconSchemeColor: SchemeColor.onSurface,
+          navigationRailMutedUnselectedIcon: false,
+          navigationRailIndicatorSchemeColor: SchemeColor.secondaryContainer,
+          navigationRailIndicatorOpacity: 1.00,
+          navigationRailBackgroundSchemeColor: SchemeColor.surface,
+          navigationRailLabelType: NavigationRailLabelType.none,
+        ),
+        keyColors: const FlexKeyColors(
+          useSecondary: true,
+          useTertiary: true,
         ),
         visualDensity: FlexColorScheme.comfortablePlatformDensity,
         useMaterial3: true,
