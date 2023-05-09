@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 
 class MyTheme {
+  static final Color backgroundDark = Color(0xff1c1b1e);
+  static final backgroundLight = Color(0xfffffbff);
+
   static final FlexSchemeColor myLightTheme = FlexSchemeColor.from(
     primary: Color(0xff6750a4),
     primaryContainer: Color(0xffeaddff),
