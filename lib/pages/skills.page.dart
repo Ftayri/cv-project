@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../menu/drawer.widget.dart';
 
-class SkillsScreen extends StatelessWidget {
+class SkillsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

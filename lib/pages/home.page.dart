@@ -49,11 +49,11 @@ class _HomePageState extends State<HomePage> {
       case 0:
         return PersonalInfoPage();
       case 1:
-        return EducationScreen();
+        return StudiesPage();
       case 2:
-        return ExperienceScreen();
+        return ExperiencePage();
       case 3:
-        return SkillsScreen();
+        return SkillsPage();
       case 4:
         return PortfolioPage();
       default:

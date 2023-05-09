@@ -13,18 +13,11 @@ void main() {
   runApp(MyApp());
 }
 
-final routes = {
-  '/home': (context) => HomePage(),
-  '/personal-info': (context) => PersonalInfoPage(),
-  '/studies':(context) => EducationScreen(),
-};
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: routes,
       home: HomePage(),
       // Made for FlexColorScheme version 7.0.5. Make sure you
 // use same or higher package version, but still same major version.

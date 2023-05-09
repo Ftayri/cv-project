@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:latlong2/latlong.dart';
-
 import '../menu/drawer.widget.dart';
 import 'professional_address.page..dart';
 
-class ExperienceScreen extends StatelessWidget {
+class ExperiencePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
