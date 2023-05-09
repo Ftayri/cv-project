@@ -43,6 +43,8 @@ dependencies:
   url_launcher: ^6.1.10
   linkable: ^3.0.1
   font_awesome_flutter: ^10.4.0
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
 
 dev_dependencies:
   flutter_test:
