@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cv/config/global.params.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
@@ -59,8 +61,12 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget drawerList(Icon icon, String text, int index) {
     return GestureDetector(
       onTap: () {
-        widget.setIndex(index);
-        ZoomDrawer.of(context)?.toggle();
+        if(text=="Fermer")
+          exit(0);
+        else {
+          widget.setIndex(index);
+          ZoomDrawer.of(context)?.toggle();
+        }
       },
       child: Container(
         margin: EdgeInsets.only(left: 20, bottom: 25),
