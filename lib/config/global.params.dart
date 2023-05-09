@@ -6,8 +6,7 @@ import 'package:flutter_zoom_drawer/config.dart';
 class GlobalParams{
 
   static List<Map<String,dynamic>> menus=[
-    {"title":"Acceuil","icon":Icon(Icons.home),
-      "route":"/home"},
+
     {"title":"Informations Personnelles","icon":Icon(Icons.info),
       "route":"/personal-info"},
     {"title":"Etudes","icon":Icon(Icons.school),

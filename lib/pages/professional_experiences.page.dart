@@ -13,6 +13,7 @@ class ExperienceScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Expériences Professionnelles',
+
           overflow: TextOverflow.visible,
         ),
         leading: DrawerWidget(),

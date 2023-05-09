@@ -47,16 +47,14 @@ class _HomePageState extends State<HomePage> {
   Widget currentScreen() {
     switch (currentIndex) {
       case 0:
-        return HomeScreen();
-      case 1:
         return PersonalInfoPage();
-      case 2:
+      case 1:
         return EducationScreen();
-      case 3:
+      case 2:
         return ExperienceScreen();
-      case 4:
+      case 3:
         return SkillsScreen();
-      case 5:
+      case 4:
         return PortfolioPage();
       default:
         return HomeScreen();
