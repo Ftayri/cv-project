@@ -8,14 +8,14 @@ class EducationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Education'),
+        title: Text('Éducation'),
         leading: DrawerWidget(),
       ),
       body: Column(
         children: [
-          SizedBox(height: 20),
+          SizedBox(height: 20),g
           Text(
-            'Parcours Académique :',
+            'Parcours Académique',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 24,
@@ -28,28 +28,27 @@ class EducationScreen extends StatelessWidget {
                 children: [
                   EducationCard(
                     institution: ' IIT Sfax',
-                    degree: 'Genie Informatique',
+                    degree: 'Génie Logiciel et Informatique Décisionnelle',
                     duration: '2021 - Présent',
-                    icon: FontAwesomeIcons.university,
+                    icon: FontAwesomeIcons.buildingColumns,
                     iconColor: Theme.of(context).primaryColor,
                   ),
                   SizedBox(height: 20),
                   EducationCard(
                     institution: ' Enetcom Sfax',
-                    degree: 'Licence en technologies de l"information et de communication',
+                    degree: 'Licence en Technologies de l\'Information et de Communication',
                     duration: '2018 - 2021',
-                    icon: FontAwesomeIcons.university,
+                    icon: FontAwesomeIcons.buildingColumns,
                     iconColor: Theme.of(context).primaryColor,
                   ),
                   SizedBox(height: 20),
                   EducationCard(
-                    institution: ' Lycée Abou Kacem Chebbi',
-                    degree: 'Baccalauréat science technique',
+                    institution: ' Lycée Ibn Rachiq',
+                    degree: 'Baccalauréat Mathématique',
                     duration: '2018',
                     icon: FontAwesomeIcons.school,
                     iconColor: Theme.of(context).primaryColor,
                   ),
-                  SizedBox(height: 20),
                 ],
               ),
             ),
