@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../menu/drawer.widget.dart';
+import 'MapScreen.page.dart';
 
 class ExperienceScreen extends StatelessWidget {
   @override
@@ -12,6 +13,19 @@ class ExperienceScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Expériences Professionnelles'),
         leading: DrawerWidget(),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.map),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MapScreen(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
