@@ -13,7 +13,7 @@ class EducationScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(height: 20),g
+          SizedBox(height: 20),
           Text(
             'Parcours Académique',
             style: TextStyle(
