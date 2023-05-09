@@ -11,11 +11,10 @@ class ExperienceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Expanded(
-            child: Text(
+        title: Text(
           'Expériences Professionnelles',
           overflow: TextOverflow.visible,
-        )),
+        ),
         leading: DrawerWidget(),
         actions: [
           IconButton(
@@ -38,10 +37,10 @@ class ExperienceScreen extends StatelessWidget {
               children: [
                 ExperienceCard(
                   company: 'CLINISYS',
-                  role: 'Stage d"initiation',
+                  role: 'Stage d\'initiation',
                   duration: 'Juin 2022 - Aout 2022',
                   description:
-                      'Développement d"une interface interactive et esthétique qui offre une expérience utilisateur optimale sur différents navigateurs et appareils.',
+                      'Développement d\'une interface interactive et esthétique qui offre une expérience utilisateur optimale sur différents navigateurs et appareils.',
                   color: Colors.blue,
                   icon: Icons.work,
                 ),
@@ -50,7 +49,7 @@ class ExperienceScreen extends StatelessWidget {
                   role: 'Stage d"été',
                   duration: 'Juin 2021 - Aout 2021',
                   description:
-                      'Contribuer à Karrio, une plateforme d’expédition multi transporteurs open source extensible, en abstractant eten intégrant les services Webde Chronopost.',
+                      'Contribuer à Karrio, une plateforme d’expédition multi transporteurs open source extensible, en abstractant eten intégrant les services Web de Chronopost.',
                   color: Colors.green,
                   icon: Icons.laptop,
                 ),
