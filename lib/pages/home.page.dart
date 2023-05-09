@@ -1,12 +1,13 @@
 import 'package:cv/config/my_theme.dart';
 import 'package:cv/menu/drawer.widget.dart';
 import 'package:cv/pages/personal_info.page.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cv/pages/skills.page.dart';
+import 'package:cv/pages/portfolio.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-
 import 'professional_experiences.page.dart';
+import 'studies.page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,12 +17,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentIndex =0;
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = Theme
+        .of(context)
+        .brightness == Brightness.dark;
     return ZoomDrawer(
-      menuScreen: MyDrawer(setIndex: (index){
+      menuScreen: MyDrawer(setIndex: (index) {
         setState(() {
           currentIndex = index;
         });
@@ -30,23 +34,33 @@ class _HomePageState extends State<HomePage> {
       borderRadius: 30,
       showShadow: true,
       angle: 0.0,
-      slideWidth: MediaQuery.of(context).size.width * 0.85,
-      menuBackgroundColor: isDark ? MyTheme.myDarkTheme.primaryContainer : MyTheme.myLightTheme.primaryContainer,
+      slideWidth: MediaQuery
+          .of(context)
+          .size
+          .width * 0.85,
+      menuBackgroundColor: isDark
+          ? MyTheme.myDarkTheme.primaryContainer
+          : MyTheme.myLightTheme.primaryContainer,
     );
   }
 
-  Widget currentScreen(){
-  switch(currentIndex){
-    case 0:
-      return HomeScreen();
-    case 1:
-      ZoomDrawer.of(context)?.toggle();
-      return PersonalInfoPage();
-    case 3:
-      return ExperienceScreen();
-    default:
-      return HomeScreen();
-  }
+  Widget currentScreen() {
+    switch (currentIndex) {
+      case 0:
+        return HomeScreen();
+      case 1:
+        return PersonalInfoPage();
+      case 2:
+        return EducationScreen();
+      case 3:
+        return ExperienceScreen();
+      case 4:
+        return SkillsScreen();
+      case 5:
+        return PortfolioPage();
+      default:
+        return HomeScreen();
+    }
   }
 
   @override
