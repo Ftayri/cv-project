@@ -31,8 +31,13 @@ class _MyDrawerState extends State<MyDrawer> {
               radius: 50,
             ),
           ),
-          Text("Iyed Zairi"),
-
+          Text("Iyed Zairi", style: TextStyle(fontSize: 20),),
+          SizedBox(height: 10.0,),
+          Container(
+            height: 1,
+            width: 250,
+            color: isDark ? Colors.white : Colors.black,
+          ),
           Expanded(
             child: ListView.builder(
               itemCount: GlobalParams.menus.length,
