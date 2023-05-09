@@ -18,19 +18,20 @@ class _MyDrawerState extends State<MyDrawer> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final theme = isDark ? MyTheme.myDarkTheme : MyTheme.myLightTheme;
     return Scaffold(
-      backgroundColor: theme.primaryContainer,
+      backgroundColor: isDark ? MyTheme.backgroundDark : MyTheme.backgroundLight,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.all(60.0),
+            padding: const EdgeInsets.only(top: 60, right: 60, left: 60, bottom: 25),
             child: CircleAvatar(
               backgroundImage: AssetImage('assets/iyed.jpg'),
               backgroundColor: theme.tertiary,
               radius: 50,
             ),
           ),
+          Text("Iyed Zairi"),
 
           Expanded(
             child: ListView.builder(
@@ -57,7 +58,7 @@ class _MyDrawerState extends State<MyDrawer> {
         ZoomDrawer.of(context)?.toggle();
       },
       child: Container(
-        margin: EdgeInsets.only(left: 20, bottom: 12),
+        margin: EdgeInsets.only(left: 20, bottom: 25),
         child: Row(
           children: [
             icon,
