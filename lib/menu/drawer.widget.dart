@@ -18,7 +18,7 @@ class _MyDrawerState extends State<MyDrawer> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final theme = isDark ? MyTheme.myDarkTheme : MyTheme.myLightTheme;
     return Scaffold(
-      backgroundColor: theme.primaryContainer,
+      backgroundColor: isDark ? MyTheme.backgroundDark : MyTheme.backgroundLight,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
