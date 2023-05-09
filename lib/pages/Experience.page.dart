@@ -4,14 +4,18 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:latlong2/latlong.dart';
 
 import '../menu/drawer.widget.dart';
-import 'MapScreen.page.dart';
+import 'professional_address.page..dart';
 
 class ExperienceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expériences Professionnelles'),
+        title: Expanded(
+            child: Text(
+          'Expériences Professionnelles',
+          overflow: TextOverflow.visible,
+        )),
         leading: DrawerWidget(),
         actions: [
           IconButton(
@@ -20,7 +24,7 @@ class ExperienceScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MapScreen(),
+                  builder: (context) => ProfessionalAddressPage(),
                 ),
               );
             },
@@ -30,30 +34,6 @@ class ExperienceScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: FlutterMap(
-              options: MapOptions(
-                center: LatLng(51.509364, -0.128928),
-                zoom: 9.2,
-              ),
-              children: [
-                TileLayer(
-                  urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                  userAgentPackageName: 'com.example.app',
-                ),
-              ],
-              nonRotatedChildren: [
-                RichAttributionWidget(
-                  attributions: [
-                    TextSourceAttribution(
-                      'OpenStreetMap contributors',
-                      onTap: () {},
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Expanded(
             child: ListView(
               children: [
                 ExperienceCard(
@@ -61,7 +41,7 @@ class ExperienceScreen extends StatelessWidget {
                   role: 'Stage d"initiation',
                   duration: 'Juin 2022 - Aout 2022',
                   description:
-                  'Développement d"une interface interactive et esthétique qui offre une expérience utilisateur optimale sur différents navigateurs et appareils.',
+                      'Développement d"une interface interactive et esthétique qui offre une expérience utilisateur optimale sur différents navigateurs et appareils.',
                   color: Colors.blue,
                   icon: Icons.work,
                 ),
@@ -70,7 +50,7 @@ class ExperienceScreen extends StatelessWidget {
                   role: 'Stage d"été',
                   duration: 'Juin 2021 - Aout 2021',
                   description:
-                  'Contribuer à Karrio, une plateforme d’expédition multi transporteurs open source extensible, en abstractant eten intégrant les services Webde Chronopost.',
+                      'Contribuer à Karrio, une plateforme d’expédition multi transporteurs open source extensible, en abstractant eten intégrant les services Webde Chronopost.',
                   color: Colors.green,
                   icon: Icons.laptop,
                 ),
@@ -79,7 +59,7 @@ class ExperienceScreen extends StatelessWidget {
                   role: 'Stage d"été',
                   duration: 'Juin 2020 - Aout 2020',
                   description:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                   color: Colors.orange,
                   icon: Icons.code,
                 ),
