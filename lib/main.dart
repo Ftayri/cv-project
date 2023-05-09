@@ -1,6 +1,6 @@
 
 import 'package:cv/config/my_theme.dart';
-import 'package:cv/pages/Etude.page.dart';
+import 'package:cv/pages/studies.page.dart';
 import 'package:cv/pages/home.page.dart';
 import 'package:cv/pages/personal_info.page.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
