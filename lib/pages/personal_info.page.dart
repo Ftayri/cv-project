@@ -25,7 +25,7 @@ class PersonalInfoPage extends StatelessWidget {
                 ),
               ),
               Text(
-                'Etudient en Génie Logiciel et Informatique Décisionnel',
+                'Etudiant en Génie Logiciel et Informatique Décisionnel',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
